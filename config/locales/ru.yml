@@ -1,0 +1,6 @@
+ru:
+  admin:
+    auth:
+      heading: 'Панель администратора'
+      remember_me: 'Запомнить'
+      login: 'Вход'
