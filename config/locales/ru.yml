@@ -4,3 +4,5 @@ ru:
       heading: 'Панель администратора'
       remember_me: 'Запомнить'
       login: 'Вход'
+    format:
+      blank: 'Не заполнено'

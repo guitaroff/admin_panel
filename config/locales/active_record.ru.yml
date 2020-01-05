@@ -1,0 +1,26 @@
+ru:
+  blank: &blank
+    blank: 'не может быть пустым'
+    confirmation: 'не может быть пустым'
+
+  activerecord:
+    models:
+      user: 'Юзер'
+      administrator: 'Администратор'
+    attributes:
+      user:
+        email: 'Электронная почта'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        name: 'Имя'
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 'уже используется'
+              <<: *blank
+            password:
+              <<: *blank
+            password_confirmation:
+              <<: *blank
