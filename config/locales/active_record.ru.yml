@@ -1,7 +1,6 @@
 ru:
   blank: &blank
     blank: 'не может быть пустым'
-    confirmation: 'не может быть пустым'
 
   activerecord:
     models:
@@ -13,6 +12,7 @@ ru:
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
         name: 'Имя'
+        avatar: 'Фото профиля'
     errors:
       models:
         user:
@@ -20,7 +20,12 @@ ru:
             email:
               taken: 'уже используется'
               <<: *blank
+            name:
+              <<: *blank
             password:
+              too_short: 'от 6 символов'
               <<: *blank
             password_confirmation:
+              confirmation: 'не совпадает'
+            avatar:
               <<: *blank
