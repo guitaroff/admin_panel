@@ -1,0 +1,104 @@
+ru:
+  trestle:
+    confirmation:
+      title: 'Вы уверены?'
+      cancel: 'Отмена'
+      delete: 'Удалить'
+    title: 'Панель администратора'
+    footer: ''
+    version: ''
+
+    onboarding:
+      welcome: 'Добро пожаловать'
+      no_admins: 'Для начала создайте админа с <code>app/admin</code>.'
+      no_template: 'Для редактирования этого шаблона создайте <code>%{path}</code>.'
+      no_form: 'Пожалуйста определите форму или создайте партиал <code>_form.html</code>.'
+
+    ui:
+      toggle_navigation: 'Переключить навигацию'
+      toggle_sidebar: 'Переключить боковую панель'
+      toggle_dropdown: 'Переключить выпадающий список'
+
+    dialog:
+      error: 'Реквест не может не завершён.'
+
+    file:
+      choose_file: 'Выберите файл...'
+      browse: 'Обзор'
+
+    helpers:
+      page_entries_info:
+        one_page:
+          display_entries:
+            zero: ''
+            one: ''
+            other: ''
+
+        more_pages:
+          display_entries: ''
+
+  admin:
+    auth:
+      heading: 'Панель администратора'
+      remember_me: 'Запомнить'
+      login: 'Вход'
+    format:
+      blank: 'Не заполнено'
+    titles:
+      new: 'Новая карточка'
+      index: ''
+      edit: 'Редактирование карточки'
+    buttons:
+      new: 'Создать'
+      edit: 'Редактировать'
+      save: 'Сохранить'
+      delete: 'Удалить'
+      show: 'Показать'
+
+    breadcrumbs:
+      home: 'Главная'
+
+    flash:
+      create:
+        success:
+          title: 'Успешно!'
+          message: '%{model_name} успешно создан.'
+
+        failure:
+          title: 'Внимание!'
+          message: 'Пожалуйста исправьте ошибки ниже.'
+
+      update:
+        success:
+          title: 'Успешно!'
+          message: '%{model_name} успешно обновлен.'
+
+        failure:
+          title: 'Внимание!'
+          message: 'Пожалуйста исправьте ошибки ниже.'
+
+      destroy:
+        success:
+          title: 'Успешно!'
+          message: '%{model_name} успешно удалён.'
+
+        failure:
+          title: 'Внимание!'
+          message: 'Не удалось удалить по какой-то причине.'
+
+    table:
+      headers:
+        id: 'ID'
+
+    form:
+      select:
+        prompt: '- Выберите %{attribute_name} -'
+
+    format:
+      blank: 'Пусто'
+
+    datepicker:
+      formats:
+        date: 'd/m/Y'
+        datetime: 'd/m/Y h:i K'
+        time: 'h:i K'
