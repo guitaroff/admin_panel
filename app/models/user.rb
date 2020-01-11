@@ -1,10 +1,11 @@
 class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
+  attribute :api, :boolean
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, :avatar, presence: true
+  validates :name, :avatar, presence: true, unless: :api
 
   protected
 
