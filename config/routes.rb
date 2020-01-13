@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: :create
       resources :sessions, only: :create
+
+      get   'account', to: 'account#show'
+      patch 'account', to: 'account#update'
     end
   end
 end
