@@ -102,3 +102,6 @@ ru:
         date: 'd/m/Y'
         datetime: 'd/m/Y h:i K'
         time: 'h:i K'
+
+  exceptions:
+    record_not_found: 'Запись не найдена.'

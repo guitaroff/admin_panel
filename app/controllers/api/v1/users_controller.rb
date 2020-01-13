@@ -1,4 +1,15 @@
 class Api::V1::UsersController < Api::V1::BaseController
+  acts_as_token_authentication_handler_for User, except: :create
+
+  def index
+    render json: User.all, status: 200
+  end
+
+  def show
+    user = User.find(params[:id])
+    render json: user, status: 200
+  end
+
   def create
     @user     = User.new(user_params)
     @user.api = true
