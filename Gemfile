@@ -15,6 +15,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'trestle'
 gem 'trestle-auth'
 gem 'devise'
+gem 'simple_token_authentication', '~> 1.0'
 gem 'carrierwave', '~> 2.0'
 
 group :development, :test do

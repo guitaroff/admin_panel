@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_token_authenticatable
   mount_uploader :avatar, AvatarUploader
   attribute :api, :boolean
 
