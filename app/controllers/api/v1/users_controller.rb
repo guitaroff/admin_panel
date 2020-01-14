@@ -11,13 +11,13 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
 
   def create
-    @user     = User.new(user_params)
-    @user.api = true
+    user     = User.new(user_params)
+    user.api = true
 
-    if @user.save
-      render :create, status: 201
+    if user.save
+      render json: user.as_json(only: [:id, :email, :authentication_token]), status: 201
     else
-      render json: { data: { errors: @user.errors } }, status: 422
+      render json: { data: { errors: user.errors } }, status: 422
     end
   end
 
