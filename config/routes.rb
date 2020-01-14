@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
       get   'account', to: 'account#show'
       patch 'account', to: 'account#update'
+      patch 'account/avatar_upload', to: 'account#avatar_upload'
     end
   end
 end

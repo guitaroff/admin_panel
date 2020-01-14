@@ -6,20 +6,28 @@ class Api::V1::AccountController < Api::V1::BaseController
   end
 
   def update
-    @user     = current_user
-    @user.api = true
+    user     = current_user
+    user.api = true
 
-    if @user.valid?
-      @user.update(user_params)
-      render json: @user.as_json(except: [:api, :authentication_token]), status: 200
+    if user.valid?
+      user.update(account_params.merge({api: true}))
+      render json: user.as_json(except: [:api, :authentication_token]), status: 200
     else
-      render json: { data: { errors: @user.errors } }, status: 422
+      render json: { data: { errors: user.errors } }, status: 422
+    end
+  end
+
+  def avatar_upload
+    if current_user.update(avatar: params[:avatar], api: true)
+      render json: current_user.as_json(except: [:api, :authentication_token]), status: 200
+    else
+      render json: { data: { errors: current_user.errors } }, status: 422
     end
   end
 
   private
 
-  def user_params
+  def account_params
     params.require(:user).permit(:name)
   end
 end
