@@ -16,7 +16,7 @@ gem 'trestle'
 gem 'trestle-auth'
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
